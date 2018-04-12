@@ -60,6 +60,7 @@ export default function spinnable(node, {
   listen(document, 'mouseup touchend').start(stopTracking);
 
   return {
+    setRotate: (angle) => nodeStyler.setRotate(angle),
     stop: () => active && active.stop()
   };
 }
